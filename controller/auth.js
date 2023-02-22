@@ -2,7 +2,7 @@ const userModel = require('../models/user')
 const jwt = require('jsonwebtoken')
 
 async function generateToken(data){
-    const token = jwt.sign({name:data.name,email:data.email},process.env.ACCESS_TOKEN)
+    const token = jwt.sign({name:data.name,email:data.email},process.env.ACCESS_TOKEN,{expiresIn:"24h"})
     return token;
 }
 

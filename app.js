@@ -11,6 +11,7 @@ const authenticationToken = require('./controller/authenticateToken')
 const updateTodo = require('./controller/updateTodo')
 const deleteTodo = require('./controller/deleteTodo')
 const getAllTodo = require('./controller/getAllTodo')
+const verifyUser = require('./controller/verifyUser')
 
 require('dotenv').config()
 
@@ -64,6 +65,8 @@ app.put('/api/update-todo/:id',authenticationToken,updateTodo)
 app.delete('/api/delete-todo/:id',authenticationToken,deleteTodo)
 
 app.get('/api/all-todo',authenticationToken,getAllTodo)
+
+app.post('/api/verify-user',verifyUser)
 
 app.listen(8000, () => {
     console.log(`Server started on PORT: 8000`);
