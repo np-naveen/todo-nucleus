@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose');
 const _ = require('lodash'); 
+const cors = require('cors');
 
 const userModel = require('./models/user')
 
@@ -33,6 +34,9 @@ const db = mongoose.connection
 
 const app = express()
 app.use(express.json())
+app.use(cors({
+    origin: 'http://localhost:3000'
+}));
 
 app.post('/api/create-user',(async(req,res)=>{
     if(_.isEmpty(req.body)){
@@ -69,5 +73,5 @@ app.get('/api/all-todo',authenticationToken,getAllTodo)
 app.post('/api/verify-user',verifyUser)
 
 app.listen(8000, () => {
-    console.log(`Server started on PORT: 8000`);
+    console.log(`Server started on PORT: 8000`)
 });

@@ -9,6 +9,7 @@
   "author": "Naveen Prabhu V",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "json-validator": "^0.0.34",
