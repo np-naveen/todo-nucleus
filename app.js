@@ -68,7 +68,7 @@ app.put('/api/update-todo/:id',authenticationToken,updateTodo)
 
 app.delete('/api/delete-todo/:id',authenticationToken,deleteTodo)
 
-app.get('/api/all-todo',authenticationToken,getAllTodo)
+app.post('/api/all-todo',authenticationToken,getAllTodo)
 
 app.post('/api/verify-user',verifyUser)
 

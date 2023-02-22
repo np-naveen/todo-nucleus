@@ -20,6 +20,10 @@ const todoModel = new mongoose.Schema({
     isactive:{
         type:Boolean,
         default:true
+    },
+    createdAt:{
+        type:Date,
+        default: Date.now
     }
 })
 

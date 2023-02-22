@@ -3,7 +3,7 @@ const todoModel = require("../models/todo");
 async function updateTodo(req,res){
     if(req.user.email != req.body.username){ return res.status(401).send({success:false,message:"Invalid user"})}
     const filter = {list_id:req.params.id}
-    const updateDoc = req.body.newvalue
+    const updateDoc = req.body.newvalues
     try{
         const updatedValue = await todoModel.updateOne(filter, updateDoc)
         if(updatedValue.matchedCount == 0){
