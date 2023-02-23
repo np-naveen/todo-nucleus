@@ -72,7 +72,7 @@ app.post('/api/all-todo',authenticationToken,getAllTodo)
 
 app.post('/api/verify-user',verifyUser)
 
-app.post('/',((req,res)=>{
+app.get('/',((req,res)=>{
     res.send("Todo nucleus running")
 }))
 
