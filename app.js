@@ -72,6 +72,7 @@ app.post('/api/all-todo',authenticationToken,getAllTodo)
 
 app.post('/api/verify-user',verifyUser)
 
-app.listen(8000, () => {
+const port = process.env.PORT || 8000
+app.listen(port, () => {
     console.log(`Server started on PORT: 8000`)
 });
