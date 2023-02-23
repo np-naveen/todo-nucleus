@@ -72,6 +72,10 @@ app.post('/api/all-todo',authenticationToken,getAllTodo)
 
 app.post('/api/verify-user',verifyUser)
 
+app.post('/',((req,res)=>{
+    res.send("Todo nucleus running")
+}))
+
 const port = process.env.PORT || 8000
 app.listen(port, () => {
     console.log(`Server started on PORT: 8000`)
