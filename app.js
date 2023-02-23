@@ -35,7 +35,7 @@ const db = mongoose.connection
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: ['http://localhost:3000','https://np-todo.vercel.app/login']
+    origin: ['http://localhost:3000','https://np-todo.vercel.app']
 }));
 
 app.post('/api/create-user',(async(req,res)=>{
